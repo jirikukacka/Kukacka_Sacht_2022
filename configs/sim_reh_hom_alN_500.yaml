@@ -1,0 +1,10 @@
+# estimation setup ~ {options}
+est: 
+  data: null # empirical data file, null for simulated pseudo-empirical data ~ {"Data_US_all.jld", null}
+
+# model setup ~ {options}
+mod:
+  obs: 500 # number of observations
+  model: "reh_hom_alN" # model identifier, see fcn_parameters.jl and fcn_model.jl for details ~ {"brf_hom_all", "brf_hom_trN", "brf_hom_trK", "reh_hom_all", "reh_hom_alN", "reh_hom_alC"}
+  cali: "van01sd" # calibration identifier, see fcn_parameters.jl for details and valid model-calibration combinations ~ {"jb2efb", "jb2efb1", "jb2efbtau02kap005", "van01sd"}
+  cons: "bas" # search constraints identifier, see fcn_parameters.jl for details ~ {"bas", "ph0"}

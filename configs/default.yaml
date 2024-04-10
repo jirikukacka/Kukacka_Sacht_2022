@@ -1,0 +1,25 @@
+# estimation setup ~ {options}
+est: 
+  seed: 42 # seed for random number generator
+  data: null # empirical data file, null for simulated pseudo-empirical data ~ {"Data_US_all.jld", null}
+  rep: 300 # number of Monte Carlo repetitions
+
+# model setup ~ {options}
+mod:
+  obs: 500 # number of observations
+  burn: 1000 # burn-in period length
+  model: "brf_hom_trN" # model identifier, see fcn_parameters.jl and fcn_model.jl for details ~ {"brf_hom_all", "brf_hom_trN", "brf_hom_trK", "reh_hom_all", "reh_hom_alN", "reh_hom_alC"}
+  cali: "jb2efb" # calibration identifier, see fcn_parameters.jl for details and valid model-calibration combinations ~ {"jb2efb", "jb2efb1", "jb2efbtau02kap005", "van01sd"}
+  cons: "bas" # search constraints identifier, see fcn_parameters.jl for details ~ {"bas", "ph0"}
+  omega: 1800.0 # penalty term (Gaunersdorfer et al., 2008; Jang and Sacht, 2021), Inf sets PT to 1 => no impact
+  nu: 0.99 # discount rate
+  pbar: 0.0 # steady states
+
+# optimization setup ~ {options}
+opt:
+  optimizer: "opt" # optimization package, "opt" for Optim.jl, "bbo" for BlackBoxOptim.jl ~ {"opt", "bbo"}
+  inits: 1 # number of initial points
+  sim: 1000 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data
+  iter: 40 # number of inner iterations, default 40 for Optim.jl, 4000 for BlackBoxOptim.jl
+  iter_out: 2 # number of outer iterations, only relevant for Optim.jl
+  delta_und: 0.0 # bandwith undersmoothing, zero for no undersmoothing

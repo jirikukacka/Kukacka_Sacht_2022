@@ -1,0 +1,11 @@
+# estimation setup
+est: 
+  data: null # empirical data file, null for simulated pseudo-empirical data ~ {"Data_US_all.jld", null}
+  rep: 2 # number of Monte Carlo repetitions
+
+# optimization setup
+opt:
+  inits: 1 # number of initial points
+  sim: 10 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data 
+  iter: 1 # number of inner iterations, default 1000 for Optim.jl, 4000 for BlackBoxOptim.jl
+  iter_out: 1 # number of outer iterations, only relevant for Optim.jl
