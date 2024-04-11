@@ -11,5 +11,4 @@ mod:
 # optimization setup ~ {options}
 opt:
   optimizer: "opt" # optimization package, "opt" for Optim.jl, "bbo" for BlackBoxOptim.jl ~ {"opt", "bbo"}
-  sim: 2000 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data
-
+  sim: 4000 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data

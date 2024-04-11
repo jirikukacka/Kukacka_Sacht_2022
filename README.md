@@ -67,7 +67,6 @@ Results found in Table 1 of our paper have the following configuration parameter
 | `opt.sim` | `1000` |
 | `opt.iter` | `40` |
 
-
 Here, the most important configuration parameters that differ across columns can be identified for results found in Table 1:
 
 | Column | `mod.obs` | `mod.model` | `mod.cali` |
@@ -102,23 +101,17 @@ Results found in Table 2 of our paper have the following configuration parameter
 
 Here, the most important configuration parameters can be identified for results found in Table 2 of our paper:
 
-| Column |`mod.model` | `mod.cali` | `opt.optimizer` | `opt.iter` |
-|:------ |:----------:|:----------:|:---------------:|:----------:|
-| BR NKM, All | `"brf_hom_trN"` | `"jb2efb"` | `"opt"` | `40` |
-| BR NKM, B | `"brf_hom_trK"` | `"jb2efb"` | `"opt"` | `40` |
-| BR NKM, C | `"brf_hom_trK"` | `"jb2efbtau02kap005"` | `"opt"` | `40` |
-| Hybrid RE NKM, All | `"reh_hom_alN"` | `"van01sd"` | `"bbo"` | `4000` |
-| Hybrid RE NKM, D | `"reh_hom_alC"` | `"jb2efb1"` | `"bbo"` | `4000` |
+| Column |`mod.model` | `mod.cali` | `opt.optimizer` | `opt.sim` | `opt.iter` |
+|:------ |:----------:|:----------:|:---------------:|:-----------:|:---------:|:----------:|
+| BR NKM, All | `"brf_hom_trN"` | `"jb2efb"` | `"opt"` | `4000` | `40` |
+| Hybrid RE NKM, All | `"reh_hom_alN"` | `"jb2efb"` | `"bbo"` | `1000` | `4000` |
 
 Here, the corresponding configurations from the `configs/` directory can be located for results found in Table 2 of our paper:
 
 | Column | Experiment |
 |:------ |:----------- |
 | BR NKM, All | `emp_brf_hom_trN_jb2efb` |
-| BR NKM, B | `emp_brf_hom_trK_jb2efb` |
-| BR NKM, C | `emp_brf_hom_trK_jb2efbtau02kap005` |
-| Hybrid RE NKM, All | `emp_reh_hom_alN_van01sd` |
-| Hybrid RE NKM, D | `emp_reh_hom_alC_jb2efb1` |
+| Hybrid RE NKM, All | `emp_reh_hom_alN_jb2efb` |
 
 ## Results
 

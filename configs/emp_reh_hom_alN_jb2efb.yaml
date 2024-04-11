@@ -5,12 +5,11 @@ est:
 # model setup ~ {options}
 mod:
   model: "reh_hom_alN" # model identifier, see fcn_parameters.jl and fcn_model.jl for details ~ {"brf_hom_all", "brf_hom_trN", "brf_hom_trK", "reh_hom_all", "reh_hom_alN", "reh_hom_alC"}
-  cali: "van01sd" # calibration identifier, see fcn_parameters.jl for details and valid model-calibration combinations ~ {"jb2efb", "jb2efb1", "jb2efbtau02kap005", "van01sd"}
+  cali: "jb2efb" # calibration identifier, see fcn_parameters.jl for details and valid model-calibration combinations ~ {"jb2efb", "jb2efb1", "jb2efbtau02kap005", "van01sd"}
   cons: "ph0" # search constraints identifier, see fcn_parameters.jl for details ~ {"bas", "ph0"}
 
 # optimization setup ~ {options}
 opt:
   optimizer: "bbo" # optimization package, "opt" for Optim.jl, "bbo" for BlackBoxOptim.jl ~ {"opt", "bbo"}
-  sim: 2000 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data
+  sim: 1000 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data
   iter: 4000 # number of inner iterations, default 40 for Optim.jl, 4000 for BlackBoxOptim.jl
-
