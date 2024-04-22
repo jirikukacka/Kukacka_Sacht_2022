@@ -44,7 +44,7 @@ Empirical data used for empirical estimation are located in the `data/` folder.
 
 ## Reproduction
 
-The repository contains all the code needed to reproduce simulated maximum likelihood experiments from the paper.
+The repository contains all the code needed to reproduce simulated maximum likelihood experiments from the paper. Small discrepancies between the reported and reproduced results may be expected due to different seeding.
 
 In order to set parameters for an experiment, create a new `.yaml` configuration file in the `configs/` directory and set parameters following the default configuration file at `configs/default.yaml`. Any and all parameters that remain unset in the new configuration file are retrieved from the default configuration file. An example of a configuration set-up trivializing the computation such that it can be run on a personal computer can be found at `configs/trivial.yaml`.
 
@@ -101,17 +101,13 @@ Results found in Table 2 of our paper have the following configuration parameter
 
 Here, the most important configuration parameters can be identified for results found in Table 2 of our paper:
 
-| Column |`mod.model` | `mod.cali` | `opt.optimizer` | `opt.sim` | `opt.iter` |
-|:------ |:----------:|:----------:|:---------------:|:-----------:|:---------:|:----------:|
-| BR NKM, All | `"brf_hom_trN"` | `"jb2efb"` | `"opt"` | `4000` | `40` |
-| Hybrid RE NKM, All | `"reh_hom_alN"` | `"jb2efb"` | `"bbo"` | `1000` | `4000` |
-
-Here, the corresponding configurations from the `configs/` directory can be located for results found in Table 2 of our paper:
-
-| Column | Experiment |
-|:------ |:----------- |
-| BR NKM, All | `emp_brf_hom_trN_jb2efb` |
-| Hybrid RE NKM, All | `emp_reh_hom_alN_jb2efb` |
+| Column |`mod.model` | `mod.cali` | `opt.optimizer` | `opt.iter` |
+|:------ |:----------:|:----------:|:---------------:|:----------:|
+| BR NKM, All | `"brf_hom_trN"` | `"jb2efb"` | `"opt"` | `40` |
+| BR NKM, B | `"brf_hom_trK"` | `"jb2efb"` | `"opt"` | `40` |
+| BR NKM, C | `"brf_hom_trK"` | `"jb2efbtau02kap005"` | `"opt"` | `40` |
+| Hybrid RE NKM, All | `"reh_hom_alN"` | `"van01sd"` | `"bbo"` | `4000` |
+| Hybrid RE NKM, D | `"reh_hom_alC"` | `"jb2efb1"` | `"bbo"` | `4000` |
 
 ## Results
 
